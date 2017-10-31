@@ -1,0 +1,1 @@
+ngrok -config ngrok.cfg -subdomain my-domain 8080
