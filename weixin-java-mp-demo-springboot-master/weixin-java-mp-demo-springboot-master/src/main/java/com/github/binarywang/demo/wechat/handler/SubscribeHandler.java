@@ -27,6 +27,7 @@ public class SubscribeHandler extends AbstractHandler {
 
 	@Resource
 	private WxUserService wxUserService;
+	
 	@Resource
 	private WxDetailService wxDetailService;
 	

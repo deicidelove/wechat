@@ -1,12 +1,18 @@
 package com.github.binarywang.demo.wechat.config;
 
+import javax.annotation.Resource;
+
+import com.common.system.service.WxDetailService;
+import com.common.system.service.WxUserService;
 import com.github.binarywang.demo.wechat.handler.*;
+
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.mp.api.WxMpConfigStorage;
 import me.chanjar.weixin.mp.api.WxMpInMemoryConfigStorage;
 import me.chanjar.weixin.mp.api.WxMpMessageRouter;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.constant.WxMpEventConstants;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -43,7 +49,7 @@ public class WechatMpConfiguration {
     private UnsubscribeHandler unsubscribeHandler;
     @Autowired
     private SubscribeHandler subscribeHandler;
-
+    
     @Bean
     @ConditionalOnMissingBean
     public WxMpConfigStorage configStorage() {
