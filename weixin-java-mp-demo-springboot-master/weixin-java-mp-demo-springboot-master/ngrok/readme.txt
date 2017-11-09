@@ -1,1 +1,1 @@
-ngrok -config ngrok.cfg -subdomain my-domain 8080
+ngrok -config ngrok.cfg -subdomain mywx 8080
